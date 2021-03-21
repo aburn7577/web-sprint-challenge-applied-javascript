@@ -2,22 +2,17 @@ import axios from 'axios'
 const Tabs = (topics) => {
   // elements
   const topicsDiv = document.createElement('div')
-  const jsDiv = document.createElement('div')
-  const bootDiv = document.createElement('div')
-  const techDiv = document.createElement('div')
-  //classes
+  //class
   topicsDiv.classList.add('topics')
-  jsDiv.classList.add('tab')
-  bootDiv.classList.add('tab')
-  techDiv.classList.add('tab')
-  //text
-  jsDiv.textContent = 'javascript'
-  bootDiv.textContent = 'bootstrap'
-  techDiv.textContent = 'technology'
-  // hierarchy
-  topicsDiv.append(jsDiv)
-  topicsDiv.append(bootDiv)
-  topicsDiv.append(techDiv)
+  
+//array from argument
+  topics.forEach(element => {
+    const tabDivs = document.createElement('div')
+    //class
+    tabDivs.classList.add('tab')
+    //hierarchy
+    topicsDiv.append(tabDivs)
+    });
   // always return
   return topicsDiv
 }

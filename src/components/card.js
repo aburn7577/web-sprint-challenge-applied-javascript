@@ -1,4 +1,31 @@
+import axios from 'axios'
 const Card = (article) => {
+  // elements
+  const cardDiv = document.createElement('div')
+    const headlineDiv = document.createElement('div')
+    const authorDiv = document.createElement('div')
+      const imgDiv = document.createElement('div')
+        const imgPic = document.createElement('img')
+    const authorSpan = document.createElement('span')
+  // classes
+  cardDiv.classList.add('card')
+  headlineDiv.classList.add('headline')
+  authorDiv.classList.add('author')
+  imgDiv.classList.add('img-container')
+  // text and attributes
+  headlineDiv.textContent = article.headline
+  imgPic.src = article.authorPhoto
+  authorSpan.textContent = `By ${article.authorName}`
+  // hierarchy
+  cardDiv.append(headlineDiv)
+  cardDiv.append(authorDiv)
+    authorDiv.append(imgDiv)
+      imgDiv.append(imgPic)
+    authorDiv.append(authorSpan)
+  // always return
+  return cardDiv
+}
+  
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
@@ -17,7 +44,7 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
-}
+
 
 const cardAppender = (selector) => {
   // TASK 6

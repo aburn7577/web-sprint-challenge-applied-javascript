@@ -1,9 +1,9 @@
 const Header = (title, date, temp) => {
   // create elements
   const headerDiv = document.createElement('div')
-  const dateSpan = document.createElement('span')
-  const titleH1 = document.createElement('h1')
-  const tempSpan = document.createElement('span')
+    const dateSpan = document.createElement('span')
+    const titleH1 = document.createElement('h1')
+    const tempSpan = document.createElement('span')
   //setting classes
   headerDiv.classList.add('header')
   dateSpan.classList.add('date')
