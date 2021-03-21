@@ -25,8 +25,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 - [X] Create a forked copy of this project.
 - [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
 - [X] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 #### Launching the App
 
@@ -42,7 +42,7 @@ Your must complete all the following steps:
 - [X] Step 0 is to link `src/index.js` to the `src/index.html` file using a script tag.
 - [X] Steps 1 and 2 are explained inside the `src/components/header.js` file.
 - [X] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
-- [ ] Steps 5 and 6 are explained inside the `src/components/card.js` file.
+- [X] Steps 5 and 6 are explained inside the `src/components/card.js` file.
 
 **Important Notes:**
 

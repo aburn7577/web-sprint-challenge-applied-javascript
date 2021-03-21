@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 const Tabs = (topics) => {
   // elements
   const topicsDiv = document.createElement('div')
@@ -10,23 +11,23 @@ const Tabs = (topics) => {
     const tabDivs = document.createElement('div')
     //class
     tabDivs.classList.add('tab')
+  //  text
+    tabDivs.textContent = element
     //hierarchy
-    topicsDiv.append(tabDivs)
+    topicsDiv.appendChild(tabDivs)
     });
   // always return
   return topicsDiv
 }
 
   
-
 const tabsAppender = (selector) => {
+  const tabLink = document.querySelector(selector)
   axios.get('https://lambda-times-api.herokuapp.com/topics')
     .then(futureData => {
-      let tabLink = document.querySelector(selector)
-      tabLink.append(Tabs(futureData.data.topics))
+      tabLink.appendChild(Tabs(futureData.data.topics))
     })
     .catch(error => console.log(error))
- 
 }
 
 export { Tabs, tabsAppender }
